@@ -35,7 +35,7 @@ public class Ship : MonoBehaviour {
         if (v > .75)
         {
             float angleThrust = Mathf.Deg2Rad * trans.eulerAngles.z;
-            rb.AddForce(new Vector2(v * mThrust * Mathf.Cos(angleThrust), Mathf.Sin(angleThrust) * mThrust * v));
+            rb.AddForce(new Vector2(Mathf.Cos(angleThrust) * v * mThrust, Mathf.Sin(angleThrust) * mThrust * v));
 
         }
 

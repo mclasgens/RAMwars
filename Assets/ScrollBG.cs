@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ScrollBG : MonoBehaviour {
 
+    public float mParalax = 1;
+
 	void Start () {
 	
 	}
@@ -14,8 +16,8 @@ public class ScrollBG : MonoBehaviour {
 
         Vector2 offset = mat.mainTextureOffset;
 
-        offset.x = transform.position.x / 10f;
-        offset.y = transform.position.y / 10f;
+        offset.x = transform.position.x / mParalax;
+        offset.y = transform.position.y / mParalax;
         mat.mainTextureOffset = offset;
 	}
 
